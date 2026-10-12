@@ -8,7 +8,7 @@ imageAlt: "Engraving of Todd Blackmon as a post office clerk sorting a flood of 
 ---
 Every once in a while, you come across a small digital trick that is simple, practical, and surprisingly useful. This Gmail tip felt like one of those.
 
-The idea is straightforward. If you use Gmail, you can add #sub after your main address in a way that helps you identify certain signups or subscriptions more easily. It is one of those lightweight hacks that can make inbox organization a little less messy, especially if you are constantly signing up for newsletters, resources, tools, or trial offers.
+The idea is straightforward. If you use Gmail, you can add +sub after your username (for example, yourname+sub@gmail.com) and mail still lands in your inbox, which helps you identify certain signups or subscriptions more easily. It is one of those lightweight hacks that can make inbox organization a little less messy, especially if you are constantly signing up for newsletters, resources, tools, or trial offers.
 
 What I like about tricks like this is not just the shortcut itself. It is the mindset behind it.
 
