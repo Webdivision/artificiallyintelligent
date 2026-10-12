@@ -1,9 +1,15 @@
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
 
 const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const fmt = (d, opts) => new Date(d).toLocaleDateString("en-US", { timeZone: "UTC", ...opts });
 
 export default function (eleventyConfig) {
+  // Cache-bust the stylesheet: the URL changes whenever style.css changes
+  eleventyConfig.addGlobalData("cssVersion", () =>
+    createHash("md5").update(readFileSync("src/css/style.css")).digest("hex").slice(0, 8)
+  );
   eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts", "src/css": "css", "src/images": "images", "src/static": "/" });
 
   // Engraved "plate" illustration. Source images are 3:2 (2048x1360).
