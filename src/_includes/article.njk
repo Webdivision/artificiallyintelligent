@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+{% set idx = 0 %}{% for p in collections.posts %}{% if p.url == page.url %}{% set idx = loop.index0 %}{% endif %}{% endfor %}
+{% set newer = collections.posts[idx - 1] if idx > 0 else null %}
+{% set older = collections.posts[idx + 1] %}
+<article class="story">
+  <p class="kicker"><a href="/archive/#{{ section | lower }}">{{ section }}</a></p>
+  <h1 class="story-head">{{ title }}</h1>
+  <div class="story-rule" aria-hidden="true"></div>
+  <p class="story-byline">By <span class="sc">{{ site.author }}</span> · <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time> · {{ content | readMins }} min. read</p>
+  <div class="story-body">
+{{ content | safe }}
+  </div>
+  <p class="endmark" aria-hidden="true">❦</p>
+</article>
+<nav class="turn" aria-label="More dispatches">
+  {% if older %}<a class="turn-prev" href="{{ older.url }}"><span class="turn-label">Previous Dispatch</span>{{ older.data.title }}</a>{% else %}<span></span>{% endif %}
+  {% if newer %}<a class="turn-next" href="{{ newer.url }}"><span class="turn-label">Next Dispatch</span>{{ newer.data.title }}</a>{% endif %}
+</nav>

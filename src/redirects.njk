@@ -1,0 +1,10 @@
+---
+permalink: /_redirects
+eleventyExcludeFromCollections: true
+---
+# Old WordPress URLs
+{% for p in collections.posts %}{% if p.data.oldSlug %}/{{ p.data.oldSlug }}/  {{ p.url }}  301
+/{{ p.data.oldSlug }}  {{ p.url }}  301
+{% endif %}{% endfor %}/category/*  /archive/  301
+/feed/  /feed.xml  301
+/wp-admin/*  /  301

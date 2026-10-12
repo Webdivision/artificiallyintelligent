@@ -1,0 +1,17 @@
+{% set latest = collections.posts[0] %}
+<header class="masthead">
+  <div class="ears">
+    <div class="ear ear-left"><span class="ear-label">This Edition</span>{{ collections.posts.length }} Dispatches on Machines &amp; the Creative Trade</div>
+    <h1 class="nameplate"><a href="/">Artificially Intelligent Life</a></h1>
+    <div class="ear ear-right"><span class="ear-label">Price</span>Free to All Readers. No Subscription Required.</div>
+  </div>
+  <p class="tagline">{{ site.tagline }}</p>
+  <div class="dateline">
+    <span>Vol. {{ latest.date | volume }} · No. {{ collections.posts.length }}</span>
+    <span>{{ site.place }} · {{ latest.date | dayDate }}</span>
+    <span>By {{ site.author }}</span>
+  </div>
+  <nav class="sections" aria-label="Sections">
+    <a href="/">Front Page</a><a href="/archive/">Archive</a><a href="/archive/#design">Design</a><a href="/archive/#workflow">Workflow</a><a href="/archive/#tools">Tools</a><a href="/feed.xml">Subscribe</a>
+  </nav>
+</header>

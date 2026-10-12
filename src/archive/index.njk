@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Archive
+---
+<section class="archive">
+  <h1 class="story-head">The Archive</h1>
+  <div class="story-rule" aria-hidden="true"></div>
+  <p class="story-byline">Every dispatch, sorted by section</p>
+  {% for sec in ["Design", "Workflow", "Tools"] %}
+  <h2 class="banner-rule" id="{{ sec | lower }}"><span>{{ sec }}</span></h2>
+  <ul class="archive-list">
+    {% for p in collections.posts %}{% if p.data.section == sec %}
+    <li><a href="{{ p.url }}">{{ p.data.title }}</a><time datetime="{{ p.date | isoDate }}">{{ p.date | longDate }}</time></li>
+    {% endif %}{% endfor %}
+  </ul>
+  {% endfor %}
+</section>

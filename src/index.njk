@@ -1,0 +1,42 @@
+---
+layout: base.njk
+---
+{% set lead = collections.posts[0] %}
+<div class="front">
+  <article class="lead">
+    <p class="kicker"><a href="/archive/#{{ lead.data.section | lower }}">{{ lead.data.section }}</a></p>
+    <h2 class="lead-head"><a href="{{ lead.url }}">{{ lead.data.title }}</a></h2>
+    <div class="story-rule" aria-hidden="true"></div>
+    <p class="lead-deck">{{ lead.content | excerpt(260) }}</p>
+    <p class="story-byline">By <span class="sc">{{ site.author }}</span> · {{ lead.date | longDate }}</p>
+    <div class="lead-body">
+      {{ lead.content | paragraphs(1, 6) | safe }}
+    </div>
+    <p class="continued"><a href="{{ lead.url }}">Continued in full <span aria-hidden="true">☞</span></a></p>
+  </article>
+  <aside class="index-col">
+    <h2 class="box-head">In This Edition</h2>
+    <ol class="contents">
+      {% for p in collections.posts %}
+      <li><a href="{{ p.url }}">{{ p.data.title }}</a><span class="contents-sec">{{ p.data.section }}</span></li>
+      {% endfor %}
+    </ol>
+    <div class="notice">
+      <h2 class="box-head">A Word from the Editor</h2>
+      <p>Dispatches on artificial intelligence and the creative trade, written by <strong>Todd Blackmon</strong>, a designer and creative director with more than twenty years at the drawing board.</p>
+      <p class="notice-link"><a href="https://webdivision.com">Webdivision.com</a></p>
+    </div>
+  </aside>
+</div>
+<div class="banner-rule" aria-hidden="true"><span>Further Dispatches</span></div>
+<div class="columns">
+  {% for p in collections.posts %}{% if not loop.first %}
+  <article class="brief">
+    <p class="kicker"><a href="/archive/#{{ p.data.section | lower }}">{{ p.data.section }}</a></p>
+    <h3 class="brief-head"><a href="{{ p.url }}">{{ p.data.title }}</a></h3>
+    <div class="brief-rule" aria-hidden="true"></div>
+    <p class="brief-text">{{ p.content | excerpt(200) }}</p>
+    <p class="brief-meta">{{ p.date | longDate }} · <a href="{{ p.url }}">Read on</a></p>
+  </article>
+  {% endif %}{% endfor %}
+</div>
