@@ -9,6 +9,7 @@ layout: base.njk
   <h1 class="story-head">{{ title }}</h1>
   <div class="story-rule" aria-hidden="true"></div>
   <p class="story-byline">By <span class="sc">{{ site.author }}</span> · <time datetime="{{ page.date | isoDate }}">{{ page.date | longDate }}</time> · {{ content | readMins }} min. read</p>
+  {% if image %}<figure class="plate plate-story">{% plate image, imageAlt, "(max-width: 760px) 100vw, 46rem", true %}</figure>{% endif %}
   <div class="story-body">
 {{ content | safe }}
   </div>

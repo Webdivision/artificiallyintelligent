@@ -13,12 +13,16 @@
 <meta property="og:title" content="{{ title or site.title }}">
 <meta property="og:description" content="{{ pageDesc }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta name="twitter:card" content="summary">
+{% set ogImg = (site.url + "/images/plates/" + image + "-og.jpg") if image else (site.url + "/images/plates/" + collections.posts[0].data.image + "-og.jpg") %}
+<meta property="og:image" content="{{ ogImg }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
 <link rel="preload" href="/fonts/old-standard-tt-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/unifrakturmaguntia-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/css/style.css">
-{% if tags and "posts" in tags %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ title | json | safe }},"datePublished":"{{ page.date | isoDate }}","url":"{{ site.url }}{{ page.url }}","mainEntityOfPage":"{{ site.url }}{{ page.url }}","articleSection":"{{ section }}","author":{"@type":"Person","name":"Todd Blackmon","url":"https://webdivision.com"},"publisher":{"@type":"Organization","name":{{ site.title | json | safe }},"url":"{{ site.url }}/"}}</script>
+{% if tags and "posts" in tags %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":{{ title | json | safe }},"datePublished":"{{ page.date | isoDate }}","url":"{{ site.url }}{{ page.url }}","mainEntityOfPage":"{{ site.url }}{{ page.url }}",{% if image %}"image":"{{ site.url }}/images/plates/{{ image }}-1200.jpg",{% endif %}"articleSection":"{{ section }}","author":{"@type":"Person","name":"Todd Blackmon","url":"https://webdivision.com"},"publisher":{"@type":"Organization","name":{{ site.title | json | safe }},"url":"{{ site.url }}/"}}</script>
 {% elif page.url == "/" %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":{{ site.title | json | safe }},"url":"{{ site.url }}/","description":{{ site.description | json | safe }},"author":{"@type":"Person","name":"Todd Blackmon","url":"https://webdivision.com"}}</script>{% endif %}
 </head>
 <body class="{{ bodyClass }}">

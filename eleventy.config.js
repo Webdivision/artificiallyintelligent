@@ -4,7 +4,16 @@ const ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const fmt = (d, opts) => new Date(d).toLocaleDateString("en-US", { timeZone: "UTC", ...opts });
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts", "src/css": "css", "src/static": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts", "src/css": "css", "src/images": "images", "src/static": "/" });
+
+  // Engraved "plate" illustration. Source images are 3:2 (2048x1360).
+  eleventyConfig.addShortcode("plate", (img, alt = "", sizes = "100vw", eager = false, widths = [480, 800, 1200, 1600]) => {
+    if (!img) return "";
+    const p = `/images/plates/${img}`;
+    const srcset = widths.map((w) => `${p}-${w}.webp ${w}w`).join(", ");
+    const esc = String(alt).replace(/"/g, "&quot;");
+    return `<picture><source type="image/webp" srcset="${srcset}" sizes="${sizes}"><img src="${p}-1200.jpg" alt="${esc}" width="1200" height="797" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></picture>`;
+  });
 
   eleventyConfig.addCollection("posts", (api) =>
     api.getFilteredByTag("posts").sort((a, b) => b.date - a.date)

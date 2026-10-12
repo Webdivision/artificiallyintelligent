@@ -2,6 +2,8 @@
 title: "Why Designers Can’t Just Trust the Old Process Anymore"
 date: 2026-03-29
 section: Design
+image: old-process
+imageAlt: "Engraving of Todd Blackmon at a drafting table in an old print shop, an iron printing press behind him and a brass automaton laying proofs beside him."
 ---
 I watched [this video](https://www.youtube.com/watch?v=4u94juYwLLM) and it connected with something I’ve been seeing firsthand.
 

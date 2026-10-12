@@ -9,6 +9,7 @@ layout: base.njk
     <div class="story-rule" aria-hidden="true"></div>
     <p class="lead-deck">{{ lead.content | excerpt(260) }}</p>
     <p class="story-byline">By <span class="sc">{{ site.author }}</span> · {{ lead.date | longDate }}</p>
+    {% if lead.data.image %}<figure class="plate"><a href="{{ lead.url }}" tabindex="-1" aria-hidden="true">{% plate lead.data.image, "", "(max-width: 900px) 100vw, 52rem", true %}</a></figure>{% endif %}
     <div class="lead-body">
       {{ lead.content | paragraphs(1, 6) | safe }}
     </div>
@@ -32,6 +33,7 @@ layout: base.njk
 <div class="columns">
   {% for p in collections.posts %}{% if not loop.first %}
   <article class="brief">
+    {% if p.data.image %}<figure class="plate plate-small"><a href="{{ p.url }}" tabindex="-1" aria-hidden="true">{% plate p.data.image, "", "(max-width: 640px) 100vw, (max-width: 900px) 50vw, 24rem", false, [480, 800] %}</a></figure>{% endif %}
     <p class="kicker"><a href="/archive/#{{ p.data.section | lower }}">{{ p.data.section }}</a></p>
     <h3 class="brief-head"><a href="{{ p.url }}">{{ p.data.title }}</a></h3>
     <div class="brief-rule" aria-hidden="true"></div>

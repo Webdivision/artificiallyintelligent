@@ -3,6 +3,8 @@ title: "A Simple Gmail Trick That Makes Subscriptions Easier to Manage"
 date: 2026-03-10
 section: Tools
 oldSlug: blog-post-title-4
+image: gmail-trick
+imageAlt: "Engraving of Todd Blackmon as a post office clerk sorting a flood of envelopes into a wall of wooden pigeonholes."
 ---
 Every once in a while, you come across a small digital trick that is simple, practical, and surprisingly useful. This Gmail tip felt like one of those.
 

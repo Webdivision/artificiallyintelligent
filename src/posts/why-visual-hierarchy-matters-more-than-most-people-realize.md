@@ -3,6 +3,8 @@ title: "Why Visual Hierarchy Matters More Than Most People Realize"
 date: 2025-11-28
 section: Design
 oldSlug: blog-post-title-6
+image: visual-hierarchy
+imageAlt: "Engraving of Todd Blackmon arranging metal type blocks from largest to smallest while a giant eye above traces the reading path between them."
 ---
 Sometimes the best design lessons come from really simple examples.
 

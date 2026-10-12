@@ -2,6 +2,8 @@
 title: "What an AI-Assisted Workflow Shift Actually Looks Like in Automotive Advertising"
 date: 2026-03-21
 section: Workflow
+image: automotive-workflow
+imageAlt: "Engraving of Todd Blackmon as a studio foreman holding a ledger while artists, helped by mechanical arms, paint posters of an early motorcar."
 ---
 Lately, I have been helping lead a major workflow shift inside a company that has spent more than 20 years operating in a traditional Adobe-based production model.
 

@@ -3,6 +3,8 @@ title: "Why Creatives Should Pay Attention to Google Antigravity"
 date: 2025-11-15
 section: Tools
 oldSlug: blog-post-title-5
+image: antigravity
+imageAlt: "Engraving of Todd Blackmon reaching for a drifting blueprint as papers, drafting tools and ink bottles float toward the ceiling of a drafting office."
 ---
 There are certain tools that show up quietly at first, but if you look closely, you can tell they are pointing toward something much bigger. That was my reaction after spending some time digging into the basics of Google Antigravity.
 

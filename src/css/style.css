@@ -110,7 +110,7 @@ a:hover{color:var(--accent)}
 .brief-meta{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-soft);text-align:center;margin:0}
 
 /* ---------- Article ---------- */
-.story{max-width:44rem;margin:0 auto}
+.story{max-width:46rem;margin:0 auto}
 .story-head{font-weight:700;text-transform:uppercase;text-align:center;font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1.05;margin:0}
 .story-body{max-width:var(--measure);margin:0 auto;font-size:1.14rem;line-height:1.65}
 .story-body p{margin:0 0 1em}
@@ -137,7 +137,12 @@ a:hover{color:var(--accent)}
 .colophon nav{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;margin:.6rem 0}
 .colophon-small{font-size:.72rem}
 
-/* Images inside posts, printed like halftone plates */
+/* Engraved plates: the illustrations sit on the page like printed cuts */
+.plate{margin:0 0 1.25rem;padding:5px;border:1px solid var(--rule);outline:1px solid var(--rule);outline-offset:-4px}
+.plate a{display:block}
+.plate img{display:block;width:100%;height:auto;mix-blend-mode:multiply;filter:contrast(1.04)}
+.plate-story{max-width:46rem;margin:0 auto 1.75rem}
+.plate-small{margin-bottom:.9rem;padding:3px;outline-offset:-3px}
 .story-body img{max-width:100%;height:auto;display:block;margin:1.5rem auto;filter:grayscale(1) contrast(1.15) sepia(.25);mix-blend-mode:multiply;border:1px solid var(--rule)}
 
 /* ---------- Responsive ---------- */

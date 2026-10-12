@@ -3,6 +3,8 @@ title: "Comet on iOS and the Future of the Browser Workflow"
 date: 2026-03-06
 section: Tools
 oldSlug: blog-post-title-7
+image: comet-browser
+imageAlt: "Engraving of Todd Blackmon at a night desk holding a glowing glass tablet as a comet streaks past the window over the city rooftops."
 ---
 I have been looking forward to Comet hitting iOS because I think the browser is overdue for a serious rethink.
 

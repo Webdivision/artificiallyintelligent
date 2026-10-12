@@ -2,6 +2,8 @@
 title: "Why 3D Exploration Can Lead to Better Logo and Brand Ideas"
 date: 2026-03-12
 section: Design
+image: 3d-exploration
+imageAlt: "Engraving of Todd Blackmon in a workshop studying a geometric emblem floating in the air, shown from several angles, with sculpted symbols on the shelves."
 ---
 I came across a video recently that made me think about logo design in a different way.
 
