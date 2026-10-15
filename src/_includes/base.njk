@@ -36,9 +36,10 @@
   <div class="fleuron" aria-hidden="true">❧</div>
   <p class="colophon-title"><a href="/">{{ site.title }}</a></p>
   <p>Written &amp; published by {{ site.author }} in {{ site.place }}.</p>
-  <nav aria-label="Footer"><a href="/">Front Page</a> · <a href="/archive/">Archive</a> · <a href="/feed.xml">Subscribe by RSS</a></nav>
+  <nav aria-label="Footer"><a href="/">Front Page</a> · <a href="/archive/">Archive</a> · <a href="/subscribe/">Subscribe</a> · <a href="/feed.xml">RSS</a></nav>
   <p class="colophon-small">© {{ collections.posts[0].date | longDate | replace(r/^.*, /, "") }} {{ site.author }}. All rights reserved.</p>
 </footer>
 </div>
+<script src="/js/subscribe.js?v={{ cssVersion }}" defer></script>
 </body>
 </html>

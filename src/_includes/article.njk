@@ -15,6 +15,11 @@ layout: base.njk
   </div>
   <p class="endmark" aria-hidden="true">❦</p>
 </article>
+<aside class="subscribe-box subscribe-inline">
+  <h2 class="box-head">Have Each Dispatch Delivered</h2>
+  <p class="subscribe-pitch">New writing on AI, design and the creative trade, sent to your inbox when it goes to press.</p>
+  {% set formId = "article" %}{% include "subscribe-form.njk" %}
+</aside>
 <nav class="turn" aria-label="More dispatches">
   {% if older %}<a class="turn-prev" href="{{ older.url }}"><span class="turn-label">Previous Dispatch</span>{{ older.data.title }}</a>{% else %}<span></span>{% endif %}
   {% if newer %}<a class="turn-next" href="{{ newer.url }}"><span class="turn-label">Next Dispatch</span>{{ newer.data.title }}</a>{% endif %}

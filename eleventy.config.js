@@ -10,7 +10,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addGlobalData("cssVersion", () =>
     createHash("md5").update(readFileSync("src/css/style.css")).digest("hex").slice(0, 8)
   );
-  eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts", "src/css": "css", "src/images": "images", "src/static": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/fonts": "fonts", "src/css": "css", "src/js": "js", "src/images": "images", "src/static": "/" });
 
   // Engraved "plate" illustration. Source images are 3:2 (2048x1360).
   eleventyConfig.addShortcode("plate", (img, alt = "", sizes = "100vw", eager = false, widths = [480, 800, 1200, 1600]) => {

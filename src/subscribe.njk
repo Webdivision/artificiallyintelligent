@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Subscribe
+permalink: /subscribe/
+---
+<section class="subscribe-page">
+  <p class="kicker">Subscriptions</p>
+  <h1 class="story-head">Have Each Dispatch Delivered</h1>
+  <div class="story-rule" aria-hidden="true"></div>
+  <p class="lead-deck">New writing on artificial intelligence, design and the creative trade, sent to your inbox whenever a fresh dispatch goes to press.</p>
+  <div class="subscribe-box">
+    <h2 class="box-head">By Post (Electronic)</h2>
+    {% set formId = "page" %}{% include "subscribe-form.njk" %}
+    <p class="subscribe-fine">Free of charge. No spam. Unsubscribe with one click at any time.</p>
+  </div>
+  <div class="subscribe-alt">
+    <h2 class="box-head">By Feed Reader</h2>
+    <p>Prefer a feed reader such as Feedly, Inoreader or NetNewsWire? Add this address:</p>
+    <p class="feed-url"><a href="/feed.xml">{{ site.url }}/feed.xml</a></p>
+  </div>
+</section>
